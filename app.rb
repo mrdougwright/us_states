@@ -17,6 +17,6 @@ post '/submit' do
 end
 
 get '/states' do
-  @states = State.all
+  @states = State.all.order(:name)
   erb :states
 end

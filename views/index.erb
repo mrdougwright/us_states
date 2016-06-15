@@ -1,5 +1,24 @@
 <h3>U.S. States</h3>
 <form action='/submit' method='POST'>
-  <input type='text' name='state[name]' value='Enter State Name' />
+  <input type='text' name='state[name]' placeholder='Enter State Name' />
+  <br />
+  <label>
+    State visited?
+    <input type='hidden' name='state[visited]' value='false' />
+    <input type='checkbox' name='state[visited]' value='true' />
+  </label>
+  <br />
+
+  <label>
+    Seen License plate in CA?
+    <input type='hidden' name='state[license_plate_seen]' value='false' />
+    <input type='checkbox' name='state[license_plate_seen]' value='true' />
+  </label>
+  <br />
+
+  <br />
   <input type='submit' value='Submit' />
 </form>
+
+<br />
+<a href='/states'>See the states</a>
