@@ -1,29 +1,35 @@
-<h3>U.S. States</h3>
-<form action='/submit' method='POST'>
-  <select name="state[name]">
-    <% @states.each do |state| %>
-      <option value="<%= state %>"><%= state %></option>
-    <% end %>
-  </select>
-  <br />
+<link href="/style.css" rel="stylesheet" type="text/css" />
 
-  <label>
-    State visited?
-    <input type='hidden' name='state[visited]' value='false' />
-    <input type='checkbox' name='state[visited]' value='true' />
-  </label>
-  <br />
-
-  <label>
-    Seen license plate in CA?
-    <input type='hidden' name='state[license_plate_seen]' value='false' />
-    <input type='checkbox' name='state[license_plate_seen]' value='true' />
-  </label>
-  <br />
-
-  <br />
-  <input type='submit' value='Submit' />
-</form>
-
-<br />
 <a href='/states'>See the states</a>
+<br />
+
+<div class='container'>
+  <h3>U.S. States</h3>
+
+  <form action='/submit' method='POST'>
+    <select name="state[name]">
+      <% @states.each do |state| %>
+        <option value="<%= state %>"><%= state %></option>
+      <% end %>
+    </select>
+    <br />
+    <br />
+
+    <label>
+      <input type='hidden' name='state[visited]' value='false' />
+      <input type='checkbox' name='state[visited]' value='true' />
+      State visited?
+    </label>
+    <br />
+
+    <label>
+      <input type='hidden' name='state[license_plate_seen]' value='false' />
+      <input type='checkbox' name='state[license_plate_seen]' value='true' />
+      Seen license plate in CA?
+    </label>
+    <br />
+
+    <br />
+    <input type='submit' value='Submit' />
+  </form>
+</class>

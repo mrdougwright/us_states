@@ -1,29 +1,20 @@
-<ul style="font-weight: bold;">
-  <li>State</li>
-  <li>Visited?</li>
-  <li>License seen in LA?</li>
-</ul>
+<link href="/style.css" rel="stylesheet" type="text/css" />
 
-<ul>
-  <% @states.each do |state| %>
-    <li class='left'><%= state.name %></li>
-    <li><%= state.visited? %></li>
-    <li><%= state.license_plate_seen? %></li>
-    <br />
-  <% end %>
-</ul>
-
-<br />
-<br />
 <a href='/'>Back to Form</a>
+<br />
+<div class='container'>
+  <ul style="font-weight: bold;">
+    <li>State</li>
+    <li>Visited?</li>
+    <li>License seen in LA?</li>
+  </ul>
 
-<style>
-  ul { padding: 0; }
-  li {
-    display: inline-block;
-    margin: 5px;
-    width: 80px;
-    text-align: center;
-  }
-  .left { text-align: left; }
-</style>
+  <ul>
+    <% @states.each do |state| %>
+      <li class='left'><%= state.name %></li>
+      <li><%= state.visited? %></li>
+      <li><%= state.license_plate_seen? %></li>
+      <br />
+    <% end %>
+  </ul>
+</div>

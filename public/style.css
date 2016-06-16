@@ -1,0 +1,12 @@
+ul { padding: 0; }
+li {
+  display: inline-block;
+  margin: 5px;
+  width: 80px;
+  text-align: center;
+}
+.left { text-align: left; }
+
+.container {
+  margin: 5px 10px;
+}
