@@ -4,6 +4,7 @@ require './config/environments'
 require './models/state'
 
 get '/' do
+  @states = State.remaining_states
   erb :index
 end
 
